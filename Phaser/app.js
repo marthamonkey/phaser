@@ -77,7 +77,7 @@ function create(){
 	//create keyboard entries
 	cursors = game.input.keyboard.createCursorKeys();
 
-	enterKey = game.input.keyboard.addKey(Phaser.keyboard.ENTER);
+	enterKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
 	
 
 }

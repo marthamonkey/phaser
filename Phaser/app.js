@@ -158,6 +158,7 @@ function restartGame(){
 	life = 3
 	lifetext.setText(life)
 	scoretext.setText(score)
+	scorelabel.text = "Score: "
 	scorelabel.visible = true;
 	scoretext.visible = true;
 	lifelabel.visible = true;

@@ -114,7 +114,7 @@ function update(){
 
 function endGame(){
 	player.kill();
-	scorelabel.text = "Game Over! Your score is" + score;
+	scorelabel.text = "Game Over! Your score is : " + score;
 	scoretext.visible = false;
 	lifelabel.visible = false;
 	lifetext.visible = false;

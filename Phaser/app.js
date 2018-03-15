@@ -158,6 +158,10 @@ function restartGame(){
 	life = 3
 	lifetext.setText(life)
 	scoretext.setText(score)
+	scorelabel.visible = true;
+	scoretext.visible = true;
+	lifelabel.visible = true;
+	lifetext.visible = true;
 	for (var i = 0; i < 12; i++){
 		var star = stars.create(i * 70, 0, "star");
 		star.body.gravity.y = 200;

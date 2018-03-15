@@ -117,12 +117,12 @@ function endGame(){
 
 function moveBaddie(){
 	if(baddie.x > 759){
-		baddie.animations.play("left")
+		baddie.animations.play("left");
 		baddie.body.velocity.x = -120;
 	}
 	else if (baddie.x <405){
-baddie.animations.play("right")s
-baddie.body.velocity.x = 120
+baddie.animations.play("right");
+baddie.body.velocity.x = 120;
 	}
 }
 

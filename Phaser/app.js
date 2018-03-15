@@ -77,6 +77,9 @@ function create(){
 	//create keyboard entries
 	cursors = game.input.keyboard.createCursorKeys();
 
+	enterKey = game.input.keyboard.addKey(Phaser.keyboard.ENTER);
+	
+
 }
 
 function update(){
@@ -118,6 +121,7 @@ function endGame(){
 	scoretext.visible = false;
 	lifelabel.visible = false;
 	lifetext.visible = false;
+	enterKey.onDown.addOnce(restartGame);
 }
 
 function moveenemey1(){
@@ -145,4 +149,18 @@ function loseLife(player, enemey1){
 
 	enemey1.kill();
 	enemey1.reset(10,20);
+}
+
+function restartGame(){
+	stars.callAll("kill")
+	player.reset(32,400)
+	score = 0
+	life = 3
+	lifetext.setText(life)
+	scoretext.setText(score)
+	for (var i = 0; i < 12; i++){
+		var star = stars.create(i * 70, 0, "star");
+		star.body.gravity.y = 200;
+		star.body.bounce.y = 0.7 + Math.random() * 0.2;
+	}
 }
